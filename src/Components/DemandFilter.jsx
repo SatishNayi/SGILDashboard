@@ -46,7 +46,7 @@ const DemandFilter = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://34.201.98.222/get_demand_plot_data"
+          "http://34.201.98.222:5000/get_demand_plot_data"
         );
         // const data = JSON.parse(response.data);
         // setPlotData(data);
@@ -72,7 +72,7 @@ const DemandFilter = () => {
     const fetchMonthData = async () => {
       try {
         const response = await axios.post(
-          "http://34.201.98.222/monthly_demand_profile",
+          "http://34.201.98.222:5000:5000/monthly_demand_profile",
           { selectedMonth, checkboxes }
         );
         const month_data = JSON.parse(response.data);

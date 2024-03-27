@@ -19,7 +19,7 @@ const PlotComponent = () => {
     // const fetch3dDailyData = async () => {
     //   try {
     //     const response = await axios.get(
-    //       "http://34.201.98.222/comp_3D_daily_plot"
+    //       "http://34.201.98.222:5000/comp_3D_daily_plot"
     //     );
     //     const data = JSON.parse(response.data);
     //     set3DailyData(data);
@@ -29,7 +29,7 @@ const PlotComponent = () => {
     // };
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://34.201.98.222/get_plot_data");
+        const response = await axios.get("http://34.201.98.222:5000/get_plot_data");
         const data = JSON.parse(response.data);
         setPlotData(data);
       } catch (error) {
@@ -39,7 +39,7 @@ const PlotComponent = () => {
     // const fetchMonthData = async () => {
     //   try {
     //     const response = await axios.get(
-    //       "http://34.201.98.222/fig_monthly_Demand_data"
+    //       "http://34.201.98.222:5000/fig_monthly_Demand_data"
     //     );
     //     const month_data = JSON.parse(response.data);
     //     setMonthData(month_data);
@@ -51,7 +51,7 @@ const PlotComponent = () => {
     const fetch3dMonthlyData = async () => {
       try {
         const response = await axios.get(
-          "http://34.201.98.222/give_comp_3D_monthly_plot"
+          "http://34.201.98.222:5000/give_comp_3D_monthly_plot"
         );
         console.log("data=>", response.data);
         const month_data = JSON.parse(response.data);
