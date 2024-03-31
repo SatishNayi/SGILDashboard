@@ -40,7 +40,7 @@ const FileSelector = () => {
   };
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://54.205.216.163:5000/get_all_files");
+      const response = await axios.get("https://api.sgillabs.com/get_all_files");
       const data = response.data.all_file;
       console.log("dataof file", data);
       setFileData(data);
@@ -52,7 +52,7 @@ const FileSelector = () => {
     try {
       setDfData("");
       const response = await axios.post(
-        "http://54.205.216.163:5000/file_selection",
+        "https://api.sgillabs.com/file_selection",
         { selectedOption , UID : getUniqueId() }
       );
       console.log(response, selectedOption);
