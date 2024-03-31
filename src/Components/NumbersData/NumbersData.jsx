@@ -56,12 +56,12 @@ export default function NumbersData({ selectionUpdated, setBessCost }) {
   const handleFetch = async () => {
     try {
       let response = await axios.post(
-        "http://34.201.98.222:5000/bess_calculation",
+        "http://54.205.216.163:5000/bess_calculation",
         { inputs: { ...inputs, bessCapacity: +inputs.bessCapacity } }
       );
       //  const bess_cost_rec = response.data.BESS_cost;
       setBessCostRec(response.data.BESS_capacity_rec);
-      response = await axios.post("http://34.201.98.222:5000/bess_calculation", {
+      response = await axios.post("http://54.205.216.163:5000/bess_calculation", {
         inputs: { ...inputs, bessCapacity: response.data.BESS_capacity_rec },
       });
       setBessOut(response.data);
@@ -76,7 +76,7 @@ export default function NumbersData({ selectionUpdated, setBessCost }) {
   const handleSubmit = async () => {
     try {
       let response = await axios.post(
-        "http://34.201.98.222:5000/bess_calculation",
+        "http://54.205.216.163:5000/bess_calculation",
         {
           inputs: {
             ...inputs,

@@ -26,7 +26,7 @@ const DateRangePicker = () => {
     const fetchMonthData = async () => {
       try {
         const response = await axios.post(
-          "http://34.201.98.222:5000/fig_monthly_Demand_data",
+          "http://54.205.216.163:5000/fig_monthly_Demand_data",
           { startDate, endDate }
         );
         const month_data = JSON.parse(response.data);
